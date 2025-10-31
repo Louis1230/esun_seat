@@ -53,7 +53,7 @@ npm run dev
 開啟瀏覽器進入上述網址即可使用系統。
 若開啟 http://localhost:8080/ 顯示 Whitelabel 404 為正常現象（後端僅提供 API 服務）。
 
-資料庫說明
+資料庫腳本說明
 📁 DB/ddl/schema.sql
 
 建立資料表：
@@ -81,11 +81,11 @@ sp_assignSeat(p_empId CHAR(5), p_seatSeq INT)：指派座位（含 Transaction�
 sp_clearSeat(p_seatSeq INT)：清除座位
 
 API 說明
-Method	  Path                  功能	                     請求體 / 參數	            回應格式
-GET	      /api/seats	          取得全部座位 (含員工資訊)	   —	                      SeatingChart[]
-GET	      /api/seats/employees	取得全部員工	               —	                      Employee[]
-POST	    /api/seats/assign	    指派座位 (員工 → 座位)      { empId, floorSeatSeq }  { success: true/false }
-POST	    /api/seats/clear	    清空座位                   { floorSeatSeq }	        { success: true/false }
+Method	    Path                    功能	                     請求體 / 參數	            回應格式
+GET	        /api/seats	            取得全部座位 (含員工資訊)	   —	                     SeatingChart[]
+GET	        /api/seats/employees	取得全部員工	              —	                        Employee[]
+POST	    /api/seats/assign	    指派座位 (員工 → 座位)        { empId, floorSeatSeq }	{ success: true/false }
+POST	    /api/seats/clear	    清空座位                     { floorSeatSeq }	       { success: true/false }
 
 後端對應：SeatController → SeatService
 使用 JdbcTemplate 呼叫 Stored Procedure。

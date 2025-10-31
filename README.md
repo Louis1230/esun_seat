@@ -82,8 +82,8 @@ sp_clearSeat(p_seatSeq INT)：清除座位
 
 API 說明
 Method	    Path                    功能	                     請求體 / 參數	            回應格式
-GET	        /api/seats	            取得全部座位 (含員工資訊)	   —	                     SeatingChart[]
-GET	        /api/seats/employees	取得全部員工	              —	                        Employee[]
+GET	        /api/seats	            取得全部座位 (含員工資訊)	    —	                     SeatingChart[]
+GET	        /api/seats/employees	取得全部員工	                —	                        Employee[]
 POST	    /api/seats/assign	    指派座位 (員工 → 座位)        { empId, floorSeatSeq }	{ success: true/false }
 POST	    /api/seats/clear	    清空座位                     { floorSeatSeq }	       { success: true/false }
 

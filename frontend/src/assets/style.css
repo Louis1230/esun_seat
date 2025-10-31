@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #fafafa;
+}
+
+button {
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.seat {
+  width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  margin: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+.empty {
+  background-color: #f1f1f1;
+}
+
+.occupied {
+  background-color: red;
+  color: white;
+}
+
+.selected {
+  background-color: lightgreen;
+}
